@@ -31,8 +31,8 @@ class GmailController < ApplicationController
     end
 
     def getmail
-        query = "feedback@slack.com"
-        mails  = get_messages(session[:access_token],query)
-        puts mails
+        query = "from:akpr.2816@gmail.com"
+        payments  = get_messages(session[:access_token],query)
+        puts payments
     end
 end

@@ -3,4 +3,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :transactions, only: [:create] do
+    collection do
+      get :redirect
+      get :callback
+      get :test
+    end
+  end
 end
